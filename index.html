@@ -467,19 +467,12 @@ section h2 span::after {
         }
 
         .gameplay-video {
-            width: 100%; /* Allow the container to be responsive */
-            max-width: 800px; /* Set a maximum width */
+            width: 100%;
+            max-width: 800px;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
             margin-bottom: 40px;
-            position: relative; /* Needed for proper video positioning within the container */
-        }
-
-        .gameplay-video video { /* Target the video element inside the container */
-            width: 100%; /* Make the video fill the width of its container */
-            height: auto; /* Maintain aspect ratio */
-            display: block;
         }
 
         .gameplay-video img {
@@ -998,16 +991,17 @@ section h2 span::after {
         </div>
     </div>
 </section>
-           <!-- Gameplay Section -->
+
+    <!-- Gameplay Section -->
     <section id="gameplay" class="gameplay">
         <div class="container">
             <h2><span>Gameplay</span></h2>
             <div class="gameplay-content">
                 <div class="gameplay-video">
-
-                    <video controls poster="gameplay-thumbnail.png">
-                        <source src="gameplay.mp4" type="video/mp4">
-
+                    <img src="gameplay.mp4" alt="Survivx Gameplay Trailer">
+                    <div class="play-button" onclick="alert('This would play a video in a real site')">
+                        <i class="fas fa-play"></i>
+                    </div>
                 </div>
                 <div class="screenshots">
                     <div class="screenshot" onclick="openModal('screenshot1.png')">

@@ -467,14 +467,21 @@ section h2 span::after {
         }
 
         .gameplay-video {
-            width: 100%;
-            max-width: 800px;
+            width: 100%; /* Allow the container to be responsive */
+            max-width: 800px; /* Set a maximum width */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
             margin-bottom: 40px;
+            position: relative; /* Needed for proper video positioning within the container */
         }
 
+        .gameplay-video video { /* Target the video element inside the container */
+            width: 100%; /* Make the video fill the width of its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+        }
+        
         .gameplay-video img {
             width: 100%;
             height: auto;
@@ -991,17 +998,14 @@ section h2 span::after {
         </div>
     </div>
 </section>
-        <!-- Gameplay Section -->
-    <section id="gameplay" class="gameplay">
+       <!-- Gameplay Section -->
+       <section id="gameplay" class="gameplay">
         <div class="container">
             <h2><span>Gameplay</span></h2>
             <div class="gameplay-content">
                 <div class="gameplay-video">
-                    <video controls poster="gameplay-thumbnail.jpg">
+                    <video controls poster="gameplay-thumbnail.png">
                         <source src="gameplay.mp4" type="video/mp4">
-                        <source src="gameplay.webm" type="video/webm">
-                        <source src="gameplay.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="screenshots">

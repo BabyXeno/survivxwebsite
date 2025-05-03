@@ -455,7 +455,7 @@ section h2 span::after {
             font-size: 1.5rem;
         }
 
-        /* Gameplay Section */
+                /* Gameplay Section */
         .gameplay {
             background-color: var(--secondary-color);
         }
@@ -467,13 +467,23 @@ section h2 span::after {
         }
 
         .gameplay-video {
-            width: 100%;
-            max-width: 800px;
+            width: 100%; /* Allow the container to be responsive */
+            max-width: 800px; /* Set a maximum width */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
             margin-bottom: 40px;
+            position: relative; /* Needed for proper video positioning within the container */
         }
+
+        .gameplay-video video { /* Target the video element inside the container */
+            width: 100%; /* Make the video fill the width of its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+        }
+
+        /* ... rest of your CSS ... */
+
 
         .gameplay-video img {
             width: 100%;
@@ -992,16 +1002,16 @@ section h2 span::after {
     </div>
 </section>
 
-    <!-- Gameplay Section -->
+        <!-- Gameplay Section -->
     <section id="gameplay" class="gameplay">
         <div class="container">
             <h2><span>Gameplay</span></h2>
             <div class="gameplay-content">
                 <div class="gameplay-video">
-                    <img src="gameplay.mp4" alt="Survivx Gameplay Trailer">
-                    <div class="play-button" onclick="alert('This would play a video in a real site')">
-                        <i class="fas fa-play"></i>
-                    </div>
+                    <!-- Use the <video> element to embed the video -->
+                    <video controls poster="gameplay-thumbnail.png">
+                        <source src="gameplay.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="screenshots">
                     <div class="screenshot" onclick="openModal('screenshot1.png')">
@@ -1020,6 +1030,7 @@ section h2 span::after {
             </div>
         </div>
     </section>
+
 
     <!-- Screenshot Modal -->
     <div id="imageModal" class="modal">

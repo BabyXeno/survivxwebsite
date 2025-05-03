@@ -455,18 +455,18 @@ section h2 span::after {
             font-size: 1.5rem;
         }
 
-        /* Gameplay Section */
-        .gameplay {
+        /* play Section */
+        .play {
             background-color: var(--secondary-color);
         }
 
-        .gameplay-content {
+        .play-content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .gameplay-video {
+        .play-video {
             width: 100%; /* Allow the container to be responsive */
             max-width: 800px; /* Set a maximum width */
             border-radius: 10px;
@@ -476,13 +476,13 @@ section h2 span::after {
             position: relative; /* Needed for proper video positioning within the container */
         }
 
-        .gameplay-video video { /* Target the video element inside the container */
+        .play-video video { /* Target the video element inside the container */
             width: 100%; /* Make the video fill the width of its container */
             height: auto; /* Maintain aspect ratio */
             display: block;
         }
         
-        .gameplay-video img {
+        .play-video img {
             width: 100%;
             height: auto;
             display: block;
@@ -543,8 +543,8 @@ section h2 span::after {
             cursor: pointer;
         }
 
-        /* Game Info Section */
-        .game-info {
+        /*  Info Section */
+        .-info {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
 
@@ -879,8 +879,8 @@ section h2 span::after {
             </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#gameplay">Gameplay</a></li>
-                <li><a href="#info">Game Info</a></li>
+                <li><a href="#play">play</a></li>
+                <li><a href="#info"> Info</a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><button class="cta-button">Play Now</button></li>
@@ -998,17 +998,16 @@ section h2 span::after {
         </div>
     </div>
 </section>
-           <!-- Gameplay Section -->
+                      <!-- Gameplay Section -->
     <section id="gameplay" class="gameplay">
         <div class="container">
             <h2><span>Gameplay</span></h2>
             <div class="gameplay-content">
                 <div class="gameplay-video">
-
                     <video controls poster="gameplay-thumbnail.png">
                         <source src="gameplay.mp4" type="video/mp4">
-
-                </div>
+                    </video>
+                </div> 
                 <div class="screenshots">
                     <div class="screenshot" onclick="openModal('screenshot1.png')">
                         <img src="screenshot1.png" alt="Screenshot 1">
